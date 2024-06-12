@@ -1,0 +1,48 @@
+[
+    {
+      "name": "stock_code",
+      "mode": "NULLABLE",
+      "type": "STRING"
+    },
+    {
+      "name": "date",
+      "mode": "NULLABLE",
+      "type": "DATE"
+
+    },
+    {
+      "name": "quantity",
+      "mode": "NULLABLE",
+      "type": "INTEGER"
+    },
+    {
+      "name": "price",
+      "mode": "NULLABLE",
+      "type": "FLOAT"
+    },
+    {
+      "name": "brokerage_fee",
+      "mode": "NULLABLE",
+      "type": "FLOAT"
+    },
+    {
+      "name": "stamp_duty_fee",
+      "mode": "NULLABLE",
+      "type": "FLOAT"
+    },
+    {
+      "name": "clearing_fee",
+      "mode": "NULLABLE",
+      "type": "FLOAT"
+    },
+    {
+      "name": "service_tax",
+      "mode": "NULLABLE",
+      "type": "FLOAT"
+    },
+    {
+      "name": "comments",
+      "mode": "NULLABLE",
+      "type": "STRING"
+    }
+  ]
