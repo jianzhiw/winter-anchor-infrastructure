@@ -4,6 +4,8 @@ on:
     branches:
       - main
   pull_request:
+    types:
+      - closed
 
 jobs:
   terraform:
@@ -28,7 +30,7 @@ jobs:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
     - name: Terraform Apply
-      if: github.ref == 'refs/head/main' && github.event_name == 'push'
+      if: github.event.pull_request_merged == true
       run: terraform apply -auto-approve -input=false
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
