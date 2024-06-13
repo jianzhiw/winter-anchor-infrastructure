@@ -40,4 +40,3 @@ SELECT
     transaction_fees,
     comments
 FROM transac
-WHERE 1 = 1
