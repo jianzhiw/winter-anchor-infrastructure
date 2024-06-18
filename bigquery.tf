@@ -41,3 +41,14 @@ resource "google_bigquery_table" "vw_glb_rakuten_stock_transaction" {
       use_legacy_sql = false
     }
 }
+
+resource "google_bigquery_table" "vw_rakuten_transactions_last_100_days" {
+    dataset_id = google_bigquery_dataset.stock_data_prod.dataset_id
+    table_id = "glb_rakuten_stock_transactions"
+    project = "winter-anchor-259905"
+    deletion_protection = false
+    view {
+      query = file("bigquery/stock_data_prod/vw_rakuten_transactions_last_100_days.sql")
+      use_legacy_sql = false
+    }
+}
